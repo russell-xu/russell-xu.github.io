@@ -1,0 +1,20 @@
+DROP
+    DATABASE IF EXISTS lab0819db;
+CREATE DATABASE lab0819db DEFAULT CHARACTER SET utf8; USE
+    lab0819db;
+DROP TABLE IF EXISTS
+    city;
+CREATE TABLE city(
+    cityId INT PRIMARY KEY,
+    cityName VARCHAR(20)
+); INSERT INTO city
+VALUES(2, 'Taipei'),(4, 'Taichung'),(6, 'Tainan');
+DROP TABLE IF EXISTS
+    employee;
+CREATE TABLE employee(
+    employeeId INT AUTO_INCREMENT PRIMARY KEY,
+    firstName VARCHAR(20),
+    lastName VARCHAR(20),
+    cityId INT
+); INSERT INTO employee(firstName, lastName, cityId)
+VALUES('Jeremy', 'Lin', 2),('Chien-Ming', 'Wang', 6);
